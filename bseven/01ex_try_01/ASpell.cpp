@@ -9,8 +9,9 @@ ASpell &ASpell::operator=(const ASpell &obj) {
 	this->effects = obj.getEffects();
 	return *this;
 }
+
 const string &ASpell::getName() const { return name; }
-const string &ASpell::getName() const { return effects; }
+const string &ASpell::getEffects() const {return effects; }
 
 ASpell::ASpell(string name, string effects) : name(name), effects(effects){}
 

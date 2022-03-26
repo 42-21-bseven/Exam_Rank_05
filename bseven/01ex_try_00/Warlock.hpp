@@ -6,31 +6,30 @@
 using std::cout;
 using std::string;
 using std::endl;
-using std::vector;
 
 
 class Warlock {
-private:
-	string name;
-	std::string title;
-	vector<ASpell *> spell;
+	private:
+		string name;
+		string title;
+		std::vector<ASpell *> array;
 
-	Warlock();
-	Warlock(const Warlock &copy);
-	Warlock &operator=(const Warlock &obj);
-public:
-	Warlock(string name, std::string title);
-	~Warlock();
+		Warlock();
+		Warlock(const Warlock &copy);
+		Warlock &operator=(const Warlock &obj);
+	public:
+		Warlock(string name, std::string title);
+		~Warlock();
 
-	const string &getName() const;
-	const string &getTitle() const;
-	void setTitle(const string str);
+		const string &getName() const;
+		const string &getTitle() const;
+		void setTitle(const string str);
 
-	void introduce() const;
+		void introduce() const;
 
-	void learnSpell(ASpell *spell);
-	void forgetSpell(string spellName);
-	void launchSpell(string spellName, ATarget &target);
+		void learnSpell(ASpell *spell);
+		void forgetSpell(string spellName);
+		void lunchSpell(string spellName, ATarget &target);
 
 };
 
